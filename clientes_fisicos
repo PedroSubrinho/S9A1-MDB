@@ -13,3 +13,11 @@ INSERT INTO clientes_fisicos (id_cliente, nome, email, cidade) VALUES
 SELECT nome, email, cidade FROM clientes_online
 UNION
 SELECT nome, email, cidade FROM clientes_fisicos;
+
+SELECT nome, email, cidade FROM clientes_online
+INTERSECT
+SELECT nome, email, cidade FROM clientes_fisicos;
+
+SELECT nome, email, cidade FROM clientes_online
+EXCEPT
+SELECT nome, email, cidade FROM clientes_fisicos;
