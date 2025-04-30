@@ -9,3 +9,15 @@ INSERT INTO clientes_online (id_cliente, nome, email, cidade) VALUES
 (1, 'Ana Silva', 'ana@email.com', 'São Paulo'),
 (2, 'Carlos Santos', 'carlos@email.com', 'Rio de Janeiro'),
 (3, 'Bia Oliveira', 'bia@email.com', 'Brasília');
+
+SELECT nome, email, cidade FROM clientes_online
+UNION
+SELECT nome, email, cidade FROM clientes_fisicos;
+
+SELECT nome, email, cidade FROM clientes_online
+INTERSECT
+SELECT nome, email, cidade FROM clientes_fisicos;
+
+SELECT nome, email, cidade FROM clientes_online
+EXCEPT
+SELECT nome, email, cidade FROM clientes_fisicos;
